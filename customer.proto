@@ -1,0 +1,35 @@
+syntax = "proto3";
+package customer;
+
+enum Account_type{
+ unknown = 0;
+ savings = 1;
+ salary = 2;
+ Bussiness = 3;
+ Current = 4;
+}
+
+message Bank_details{
+int64 IFSCcode =1;
+string branch = 2;
+}
+
+message Address
+{
+string door_no=1;
+string street_name=2;
+string city_name=3;
+int64 pincode=4;
+string district=5;
+string state=6; 
+}
+
+message Customer_details{
+ string name =1; 
+ int64 phone_no=2;
+  int64 Account_no=3;
+  double Curr_balance=4;
+  Account_type type=5;
+  Bank_details details=6;
+  Address address=7;
+}
